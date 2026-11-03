@@ -1,0 +1,57 @@
+:root {
+  --text: #222;
+  --muted: #666;
+  --accent: #6495ed;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: "Public Sans", sans-serif;
+  font-size: 16.5px;
+  line-height: 1.6;
+}
+
+.site-shell {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+h1, h2 { text-transform: uppercase; }
+h1 { font-size: 36px; margin: 0 0 28px; }
+h2 { font-size: 20px; letter-spacing: 0.04em; margin: 64px 0 24px; }
+h3 { font-size: 18px; font-weight: 600; margin: 0; }
+p  { margin: 6px 0 0; }
+
+article + article { margin-top: 32px; }
+.meta { color: var(--muted); font-size: 14.5px; }
+
+/* links: the only place the accent appears */
+a, .text-link, summary { color: var(--accent); text-decoration: none; }
+a:hover, .text-link:hover, summary:hover { text-decoration: underline; }
+
+.text-link {
+  border: 0; padding: 0; background: none;
+  font: inherit; cursor: pointer;
+}
+
+summary { cursor: pointer; width: fit-content; margin-top: 6px; }
+
+/* intro: headshot beside bio, stacked on mobile */
+.intro {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.headshot { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.links { margin-top: 16px; }
+
+@media (max-width: 640px) {
+  .intro { grid-template-columns: 1fr; }
+  .headshot { width: 180px; }
+}
