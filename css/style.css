@@ -44,14 +44,15 @@ summary { cursor: pointer; width: fit-content; margin-top: 6px; }
 /* intro: headshot beside bio, stacked on mobile */
 .intro {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 280px 1fr;
   gap: 32px;
   align-items: start;
 }
 .headshot { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.bio p + p { margin-top: 14px; }
 .links { margin-top: 16px; }
 
 @media (max-width: 640px) {
   .intro { grid-template-columns: 1fr; }
-  .headshot { width: 180px; }
+  .headshot { width: 240px; }
 }
