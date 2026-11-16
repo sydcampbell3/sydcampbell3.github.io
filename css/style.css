@@ -51,6 +51,29 @@ summary { cursor: pointer; width: fit-content; margin-top: 6px; }
 .headshot { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 .bio p + p { margin-top: 14px; }
 .links { margin-top: 16px; }
+.callout { margin-top: 18px; }
+.callout-button {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.callout-button:hover {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* subpages (e.g. usaee/) */
+.back { display: inline-block; margin-bottom: 24px; font-size: 14.5px; }
+.page-header h1 { margin-bottom: 4px; }
+.page-header .meta { margin-top: 0; }
+.subpage section h2 { margin-top: 48px; }
+.data-list { margin: 10px 0 14px; padding-left: 22px; }
+.data-list li + li { margin-top: 4px; }
 
 @media (max-width: 640px) {
   .intro { grid-template-columns: 1fr; }
